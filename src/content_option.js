@@ -14,7 +14,8 @@ const introdata = {
         third: "I code cool websites",
     },
     description: "I am a undergraduate student at Penn State, studying in Computer Science and minor in Supply Chain & Information Science of Technology",
-    your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
+    your_img_url: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    
 };
 
 const dataabout = {
