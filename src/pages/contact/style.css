@@ -1,45 +1,178 @@
-.contact__form .form-control {
-    padding: 1.375rem .75rem;
-    line-height: 1.5;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    border-radius: 0 !important;
-    border: 1px solid var(--secondary-color);
+/* Contact Page Styles */
+.contact-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  background: var(--bg-color);
+  transition: all 0.3s ease;
 }
 
-.contact__form input.form-control {
-    margin-bottom: 2em;
-    height: calc(2.5em + .75rem + 2px);
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
-button.btn.ac_btn:hover {
-    color: var(--secondary-color);
+.contact-info {
+  margin-bottom: 2rem;
 }
 
-.loading-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 10px;
-    z-index: 999999999;
-    background: var(--text-color);
-    transform: translateX(100%);
-    animation: shift-rightwards 1s ease-in-out infinite;
-    animation-delay: .3s;
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 15px;
+  background: var(--bg-secondary);
+  transition: all 0.3s ease;
+  height: 100%;
 }
 
-@keyframes shift-rightwards {
-    0% {
-        transform: translateX(-100%);
-    }
-    40% {
-        transform: translateX(0%);
-    }
-    60% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
+.contact-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.contact-details h5 {
+  margin-bottom: 0.5rem;
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+.contact-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+  transform: translateX(5px);
+}
+
+.social-links {
+  margin-top: 2rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px) scale(1.1);
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon.linkedin::before {
+  background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+}
+
+.social-icon.github::before {
+  background: linear-gradient(135deg, #333 0%, #666 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .contact-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .social-icons {
+    gap: 1rem;
+  }
+  
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-card .card-body {
+    padding: 2rem 1.5rem;
+  }
+  
+  .contact-item {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .contact-card {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .contact-item {
+  background: var(--bg-secondary);
+}
+
+/* Animation for contact items */
+.contact-item {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.contact-item:nth-child(1) { animation-delay: 0.1s; }
+.contact-item:nth-child(2) { animation-delay: 0.2s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

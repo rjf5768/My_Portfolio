@@ -139,6 +139,61 @@ const dataportfolio = [{
     },*/
 ];
 
+const projectsData = [
+    {
+        id: 1,
+        title: "Research Papers",
+        category: "Academic",
+        description: "Collection of my research papers and academic publications in computer science and algorithms.",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        technologies: ["Research", "Algorithms", "AI", "Computer Science"],
+        link: "#",
+        demo: null
+    },
+    {
+        id: 2,
+        title: "Mobile App Demo",
+        category: "Development",
+        description: "A demonstration of my mobile application development skills with interactive features and modern UI/UX design.",
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        technologies: ["React Native", "JavaScript", "Mobile Development", "UI/UX"],
+        link: "#",
+        demo: "https://example.com/demo"
+    },
+    {
+        id: 3,
+        title: "Game Development (UE5)",
+        category: "Gaming",
+        description: "Independent game development project using Unreal Engine 5, showcasing 3D modeling and game mechanics.",
+        image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        technologies: ["Unreal Engine 5", "C++", "3D Modeling", "Game Design"],
+        link: "#",
+        demo: null
+    },
+    {
+        id: 4,
+        title: "Linear Device Project",
+        category: "Hardware",
+        description: "Hardware project involving linear device development with embedded systems and IoT integration.",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        technologies: ["Embedded Systems", "IoT", "Hardware Design", "C"],
+        link: "https://github.com/rjf5768",
+        demo: null
+    },
+    {
+        id: 5,
+        title: "WeChat Mini-Program",
+        category: "Web Development",
+        description: "Developed a WeChat mini-program using HTML, CSS, JavaScript, and Node.js for enhanced user experience.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        technologies: ["HTML", "CSS", "JavaScript", "Node.js", "WeChat API"],
+        link: "#",
+        demo: null
+    }
+];
+
+const resumeDownloadLink = "https://www.linkedin.com/in/rong-feng-205b022a1/details/featured/1725397836592/single-media-viewer/?profileId=ACoAAEj04qUBSeA_j2yPJfxxsI1vMf9Wn4vwk4U";
+
 const contactConfig = {
     YOUR_EMAIL: "rjf5768@psu.edu",
     YOUR_FONE: "(941)5244589",
@@ -167,4 +222,6 @@ export {
     contactConfig,
     socialprofils,
     logotext,
+    projectsData,
+    resumeDownloadLink,
 };
